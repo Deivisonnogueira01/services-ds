@@ -18,7 +18,7 @@ public class WorkerController {
     @GetMapping("/{id}")
      public ResponseEntity<WorkerModelo> getWorker (@PathVariable("id") Integer id){
 
-        WorkerModelo worker = new WorkerModelo();
+        WorkerModelo worker = new WorkerModelo(id);
        return ResponseEntity.ok(worker);
 
      }
