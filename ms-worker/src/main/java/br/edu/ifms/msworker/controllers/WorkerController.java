@@ -22,5 +22,12 @@ public class WorkerController {
        return ResponseEntity.ok(worker);
 
      }
+
+     @GetMapping("/{id}/salary")
+     public ResponseEntity<Double> getSalaryWorker(@PathVariable Integer id){
+
+       var worker = new WorkerModelo();
+       return ResponseEntity.ok(worker.getSalario());
+     }
     
 }
